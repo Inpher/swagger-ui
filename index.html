@@ -56,6 +56,7 @@
       }
       window.swaggerUi = new SwaggerUi({
         url: url,
+        basePath: '/ultraRest',
         dom_id: "swagger-ui-container",
         supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
         onComplete: function(swaggerApi, swaggerUi){
@@ -79,6 +80,11 @@
           });
 
           addApiKeyAuthorization();
+          var t = window.swaggerUi.api.apis.UltraService.operations;
+          for (var key in t) {
+		  t[key].basePath = "/ultraRest";
+	  }
+
         },
         onFailure: function(data) {
           log("Unable to Load SwaggerUI");
