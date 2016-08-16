@@ -400,7 +400,7 @@
                 "description": "Get the list of groups that can access the given path.",
                 "operationId": "resource_UltraService_listAuthorizedGroups_GET",
                 "produces": [
-                    "text/plain"
+                    "application/json"
                 ],
                 "parameters": [
                     {
@@ -888,19 +888,22 @@
             }
         },
         "/search": {
-            "get": {
+            "post": {
                 "tags": [
                     "user"
                 ],
                 "summary": "Search in own and shared resources",
                 "description": "Search for the keywords on the backend. The search will be performed on the user resources and the shared resources",
-                "operationId": "resource_UltraService_search_GET",
+                "operationId": "resource_UltraService_search_POST",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
                 "produces": [
                     "application/json"
                 ],
                 "parameters": [
                     {
-                        "name": "keywords",
+                        "name": "query",
                         "in": "query",
                         "type": "string",
                         "description": "a list of keywords to search for. The corresponding query is a disjunction of all the keywords."
@@ -935,19 +938,22 @@
             }
         },
         "/searchPaged": {
-            "get": {
+            "post": {
                 "tags": [
                     "user"
                 ],
                 "summary": "Search with defined paging in own and shared resources",
                 "description": "Search for the keywords on the backend. The search will be performed on the user resources and the shared resources with paging options",
-                "operationId": "resource_UltraService_searchPaged_GET",
+                "operationId": "resource_UltraService_searchPaged_POST",
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
                 "produces": [
                     "application/json"
                 ],
                 "parameters": [
                     {
-                        "name": "keywords",
+                        "name": "query",
                         "in": "query",
                         "type": "string",
                         "description": "a list of keywords to search for. The corresponding query is a disjunction of all the keywords."
@@ -1046,7 +1052,7 @@
             }
         },
         "/unshareElement": {
-            "get": {
+            "post": {
                 "tags": [
                     "user"
                 ],
