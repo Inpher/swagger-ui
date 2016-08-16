@@ -28,7 +28,7 @@
                 ],
                 "description": "Add a user to an existing group",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -80,7 +80,7 @@
                     "application/json"
                 ],
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -122,7 +122,7 @@
                 "description": "Deletes the element by path recursively or non-recursively. Only the owner of a path can delete an element.",
                 "operationId": "resource_UltraService_delete_DELETE",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -168,7 +168,7 @@
                 "description": "Checks whether a sharing group exists.",
                 "operationId": "resource_UltraService_doesSharingGroupExists_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -245,7 +245,7 @@
                 "description": "Returns whether path exists on the backend or not.",
                 "operationId": "resource_UltraService_exists_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -282,7 +282,7 @@
                 "description": "Checks whether path is a directory.",
                 "operationId": "resource_UltraService_isDirectory_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -319,7 +319,7 @@
                 "description": "Checks whether path is a file.",
                 "operationId": "resource_UltraService_isFile_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -356,7 +356,7 @@
                 "description": "Verifies membership of a given user to the sharing group.",
                 "operationId": "resource_UltraService_isMember_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -400,7 +400,7 @@
                 "description": "Get the list of groups that can access the given path.",
                 "operationId": "resource_UltraService_listAuthorizedGroups_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -572,7 +572,7 @@
                 "description": "Logs out the user from the InpherClient client (cleans up the environment, removes all the user's workers).",
                 "operationId": "resource_UltraService_logout_POST",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -646,7 +646,7 @@
                 "description": "Move oldPath into newPath.",
                 "operationId": "resource_UltraService_move_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -692,7 +692,7 @@
                 "description": "Return the element owner of path.",
                 "operationId": "resource_UltraService_owner_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -736,7 +736,7 @@
                 "description": "Used for rolling sharing group keys. Generates new keys for a sharing group and then re-encrypts the old content with the new keys.",
                 "operationId": "resource_UltraService_refreshGroupKeyring_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -774,7 +774,7 @@
                 "description": "Used for rolling the user's keys. Generates new keys for the user and then re-encrypts the old content with the new keys. A new certificate has to be generated for the new public key.",
                 "operationId": "resource_UltraService_refreshUserKeyring_POST",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -831,7 +831,7 @@
                     }
                 ],
                 "responses": {
-                    "201": {
+                    "200": {
                         "description": "Successful registration"
                     },
                     "400": {
@@ -852,7 +852,7 @@
                 "description": "Revokes a user of a sharing group. If that user ownes shares, these shares will be unshared.",
                 "operationId": "resource_UltraService_revokeUser_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -1001,7 +1001,7 @@
                 "description": "Share an element with a sharing group using share name shareName. Only the owner of an element can share it.",
                 "operationId": "resource_UltraService_shareElement_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -1053,7 +1053,7 @@
                 "description": "Unshare the element in sharing group groupName with share name shareName. Only the owner of the element can unshare it.",
                 "operationId": "resource_UltraService_unshareElement_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
@@ -1099,7 +1099,7 @@
                 "description": "Upload the file source on the backend at path destition",
                 "operationId": "resource_UltraService_uploadFile_POST",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "consumes": [
                     "multipart/form-data"
@@ -1155,7 +1155,7 @@
                 "description": "Download the user certificate.",
                 "operationId": "resource_UltraService_userCertificate_GET",
                 "produces": [
-                    "application/json"
+                    "text/plain"
                 ],
                 "parameters": [
                     {
