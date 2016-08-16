@@ -602,6 +602,9 @@
                 ],
                 "description": "Create a directory",
                 "operationId": "resource_UltraService_mkdir_POST",
+                "produces": [
+                  "text/plain"
+                ],
                 "consumes": [
                     "application/json"
                 ],
@@ -809,6 +812,9 @@
                 "operationId": "resource_UltraService_register_POST",
                 "consumes": [
                     "application/json"
+                ],
+                "produces": [
+                  "text/plain"
                 ],
                 "parameters": [
                     {
